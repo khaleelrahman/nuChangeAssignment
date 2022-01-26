@@ -11,7 +11,7 @@ const Checkout = ({ cartItems }) => {
           <span>Product</span>
         </div>
         <div className="header-bloack">
-          <span>Description</span>
+          <span>Name</span>
         </div>
         <div className="header-bloack">
           <span>Quantity</span>
