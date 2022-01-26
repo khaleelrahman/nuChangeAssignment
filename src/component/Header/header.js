@@ -1,11 +1,14 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 import CartIcon from '../cart-icon/cart.icon'
+import CartDropdown from '../cart-dropdown/cart-dropdown'
 import './header.scss'
 
 
-const Header=()=>{
+const Header=({hidden})=>{
+    console.log('khaleel',hidden)
     return(
         <div className='header'>
             <div className='logo-container'>
@@ -23,11 +26,15 @@ const Header=()=>{
                     </div>
                 
                 <CartIcon/>
+                { hidden?null:
+            <CartDropdown/>}
             </div>
         </div>
     )
 }
+const mapStateToProps=(state)=>({
+    hidden:state?.cart?.hidden
+})
 
 
-
-export default Header;
+export default connect(mapStateToProps)(Header);
