@@ -8,7 +8,6 @@ import './header.scss'
 
 
 const Header = ({ hidden }) => {
-    console.log('khaleel', hidden)
     return (
         <div className='header'>
             <Link to='/' className='logo-container'>

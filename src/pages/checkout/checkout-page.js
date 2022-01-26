@@ -2,8 +2,8 @@ import React from "react";
 import "./checkout-page.scss";
 import { connect } from "react-redux";
 import CheckoutItem from "../../component/checkout-item/checkout-item";
-const Checkout = ({cartItems}) => {
-  const tot=cartItems.reduce((accumulatedQuantity,cartItem)=>accumulatedQuantity+cartItem.quantity*cartItem.price,0)
+const Checkout = ({ cartItems }) => {
+  const tot = cartItems.reduce((accumulatedQuantity, cartItem) => accumulatedQuantity + cartItem.quantity * cartItem.price, 0)
   return (
     <div className="checkout-page">
       <div className="checkout-header">
@@ -24,9 +24,9 @@ const Checkout = ({cartItems}) => {
         </div>
       </div>
       {
-          cartItems.map((cartItem)=>
-            <CheckoutItem key={cartItem.id} cartItem={cartItem}/>
-          )
+        cartItems.map((cartItem) =>
+          <CheckoutItem key={cartItem.id} cartItem={cartItem} />
+        )
       }
       <div className='total'>
         <span>Total:${tot}</span>
@@ -34,9 +34,9 @@ const Checkout = ({cartItems}) => {
     </div>
   );
 };
- const mapStateToProps=(state)=>({
-     cartItems:state?.cart?.cartItems
- })
+const mapStateToProps = (state) => ({
+  cartItems: state?.cart?.cartItems
+})
 
 
 export default connect(mapStateToProps)(Checkout);

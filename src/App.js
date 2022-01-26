@@ -5,7 +5,7 @@ import Header from "./component/Header/header";
 import Shoppage from "./pages/collection/collection";
 import Checkout from "./pages/checkout/checkout-page";
 
-
+document.title = 'EShope';
 function App() {
   return (
     <div>
