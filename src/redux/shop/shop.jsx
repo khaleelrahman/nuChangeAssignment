@@ -12,7 +12,7 @@ const SHOP_DATA = [
   
   "vendor":"Himachal Pvt Ltd", 
   
-  "category":"Vegtables" ,
+  "category":"Vegetables" ,
 "imageUrl":"https://i.ibb.co/Mhx0nZQ/image.jpg"
 }, 
   

@@ -1,11 +1,22 @@
 .collection-page{
     display: flex;
     flex-direction: column;
-
+.heading{
+    display: flex;
     .title{
         font-size: 38px;
         margin: 0 auto 30px;
     }
+    .filter{
+        padding: 5px;
+        font-weight: 600;
+    }
+    .select{
+        margin-left: 5px;
+        width: 14%;
+    }
+}
+    
 
     .items{
         display: grid;
